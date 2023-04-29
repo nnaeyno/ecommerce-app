@@ -1,10 +1,9 @@
 import java.util.Objects;
 
 public class Product {
-    String name;
-    double price;
-    String prodID;
-    double sellPrice;
+    private final String name;
+    private final double price;
+    private final String prodID;
 
 
     public Product(String name, Double price, String prodID) {
@@ -17,13 +16,6 @@ public class Product {
         return price;
     }
 
-    public double getSellPrice() {
-        return sellPrice;
-    }
-
-    public void setSellPrice(double sellPrice) {
-        this.sellPrice = sellPrice;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -34,9 +26,13 @@ public class Product {
     }
 
 
-
     @Override
     public int hashCode() {
         return Objects.hash(prodID);
     }
+
+    public String getName() {
+        return name;
+    }
 }
+
