@@ -4,7 +4,6 @@ import java.util.StringTokenizer;
 public class Main {
     static Data data = new Data();
     public static void main(String[] args) {
-        Data data = new Data();
         while(true) {
             Scanner input = new Scanner(System.in);
 

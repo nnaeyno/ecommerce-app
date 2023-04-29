@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Data {
 
-    private HashMap<String, ProductOrderHistory> orderHistory;
+    private final HashMap<String, ProductOrderHistory> orderHistory;
     // something like that attached to idea would be smarter
     //registeredProdycts ID -> PRODUCT
     //wareHouse data    ID

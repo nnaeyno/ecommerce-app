@@ -8,8 +8,8 @@ public class ProductOrderHistory {
     public ProductOrderHistory(Product product) {
         this.product = product;
         this.remainingQuantity = 0;
-        this.averagePurchasePrice = product.getPrice();
-        this.averageOrderPrice = 0;
+        this.averagePurchasePrice = 0;
+        this.averageOrderPrice = product.getPrice();
         this.soldQuantity = 0;
     }
 
