@@ -9,8 +9,6 @@ public class Main {
             Scanner input = new Scanner(System.in);
 
             System.out.print("* ");
-//            if(!input.hasNextLine())
-//                continue;
 
             String command = input.nextLine();
             if(!parseCommand(command))
