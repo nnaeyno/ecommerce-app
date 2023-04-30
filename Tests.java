@@ -7,6 +7,7 @@ public class Tests {
     final String PROD_ID001 = "prod001";
     final String PROD_ID002 = "prod002";
     final String PROD_NAME = "iphone";
+    final String PROD_NAME2 = "samsung";
 
     @Test
     public void testOne(){
@@ -34,5 +35,21 @@ public class Tests {
         assertEquals(data.getQuantity(PROD_ID001), 6);
         assertEquals(200, data.getProfit(PROD_ID001), 0);
 
+    }
+
+    @Test
+    public void testThree(){
+        Data data = new Data();
+        data.saveProduct(PROD_ID002, PROD_NAME2, 3000);
+        data.saveProduct(PROD_ID001, PROD_NAME, 2800);
+        data.purchaseProduct(PROD_ID001, 5, 3500);
+        data.purchaseProduct(PROD_ID002, 4, 3000);
+        assertEquals(5, data.getQuantity(PROD_ID001));
+        assertEquals(4, data.getQuantity(PROD_ID002));
+        data.orderProduct(PROD_ID001, 4);
+        assertEquals(data.getQuantity(PROD_ID001), 1);
+        assertEquals(data.getQuantity(PROD_ID002), 4);
+        assertEquals(PROD_NAME, data.getMostPopular());
+        assertEquals(PROD_NAME, data.getFewest());
     }
 }
